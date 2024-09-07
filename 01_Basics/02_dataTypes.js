@@ -27,7 +27,7 @@ let state3 = null // null
 // undefined -> value abhi assign nahi hoi hai
 // symbol -> unique - We will use it in React
 
-// object
+// object -> will be discussed later
 
 console.log(typeof "Saqib");
 console.log(typeof age);
