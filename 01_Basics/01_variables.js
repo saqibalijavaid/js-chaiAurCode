@@ -10,7 +10,6 @@ let accountState;
 
 
 // accountId = 2 // Not Allowed
-
 accountEmail = "aly@gmail.com"
 accountPassword = "678910"
 accountCity = "Isb"
@@ -22,6 +21,3 @@ console.log(accountId);
 */
 
 console.table([accountId,accountEmail,accountPassword,accountCity,accountState]);
-
-
-
