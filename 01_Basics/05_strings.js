@@ -16,6 +16,10 @@ Run the below two lines in Browser Console, click enter and then click on arrow,
 
 *************************************************************************
 */
+
+// THERE ARE SOME PROPERTIES, TO USE THEM WE JUST NEED TO WRITE THEIR NAME AFTER DOT e.g. gameName.length
+// BUT FOR FUNCTIONS WE ALSO PUT () AFTER PROPERTY/FUNCTION NAME e.g. gameName.toUpperCase()
+
 const gameName = new String('Saqib-Ali-Javaid')
 console.log(gameName);
 
