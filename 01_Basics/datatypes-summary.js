@@ -55,10 +55,73 @@ const anotherId = Symbol('123')
 
 console.log(id===anotherId); // false
 
+console.log(typeof (id));
+
 // As we have make id and anotherId unique, that's why even we are assigning same value to both, there comparison will give us false result (bcz of their uniqueness)
 
 // *** BigInt ***
 const bigNumber = 243224343254376875n
 // writing 'n' in last, make it BigInt
 
+console.log(typeof (bigNumber));
+
 // ********************* Reference *********************
+
+// - Array
+// - Objects
+// - Functions
+
+// *** Array ***
+
+const names = ["Saqib", "Ali", "Javaid"]
+
+// *** Objects ***
+{
+    profileName: "Abdullah"
+    age: 18
+}
+
+// OR
+
+let myObj = {
+    profileName: "Mujtaba",
+    age: 20
+}
+
+// *** Functions ***
+
+const myFunction = function()
+{
+    console.log("Hello World");
+    
+}
+
+console.log(typeof (names));
+console.log(typeof (myObj));
+console.log(typeof (myFunction));
+
+
+// https://262.ecma-international.org/5.1/#sec-11.4.3
+
+/*
+
+Type of val 	Result
+-----------     ------
+Undefined   	"undefined"
+Null 	        "object"
+Boolean 	    "boolean"
+Number 	        "number"
+String 	        "string"
+
+// Symbol          "symbol"
+// BigInt          "bigint"
+
+// Array           "object"
+// Object          "object"
+// Function        "function (function object)"
+
+Object (native and does not implement [[Call]]) 	    "object"
+Object (native or host and does implement [[Call]]) 	"function"
+Object (host and does not implement [[Call]])          	Implementation-defined except may not be "undefined", "boolean", "number", or "string".
+
+*/
