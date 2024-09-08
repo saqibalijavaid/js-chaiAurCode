@@ -125,3 +125,46 @@ Object (native or host and does implement [[Call]]) 	"function"
 Object (host and does not implement [[Call]])          	Implementation-defined except may not be "undefined", "boolean", "number", or "string".
 
 */
+
+// ***************************************************************
+
+/*
+Memory:
+    - Stack (Used for Primitive datatypes)
+    - Heap  (Used for Non-Primitive datatypes)
+
+    Primitive Types:
+    1. Stored in stack.
+    2. Passed or assigned by value (call by value).
+    3. Changes to copies don't affect the original.
+
+    Reference Types:
+    1. Stored in heap, accessed via references (References are stored in stack).
+    2. Changing the value through reference affects the original.
+*/
+
+let myName = "Saqib"
+
+let anotherName = myName
+console.log(anotherName);
+
+anotherName = "Ali"
+
+console.log(myName);
+console.log(anotherName);
+
+// Even we changed the value of anotherName, still the value of myname remained same
+
+let userOne = {
+    email: "user@gmail.com",
+    nayapay: "user@nayapay"
+}
+
+let userTwo = userOne
+
+userTwo.email = "saqib@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);
+
+// Even we only changed the value for userTwo, but the value for userOne also get changed
