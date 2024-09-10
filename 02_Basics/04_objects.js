@@ -27,6 +27,7 @@ User1.id = "123abc";
 User1.name = "Saqib";
 User1.isLoggedIn = false;
 
+/*
 console.log(User1);
 console.log(Object.keys(User1)); // we will get all the keys of User1 in array form, so we can perform array operations
 console.log(Object.values(User1)); // we will get all the values of User1 in array form, so we can perform array operations
@@ -37,6 +38,8 @@ console.log(Object.entries(User1));
 // Kya user1 k pass ye property hai
 console.log(User1.hasOwnProperty("isLoggedIn"));
 console.log(User1.hasOwnProperty("isNotLoggedIn"));
+
+*/
 
 // ******** object within object ********
 
@@ -125,3 +128,48 @@ console.log(myUsersArr);
 console.log(myUsersArr[0]);
 console.log(myUsersArr[0].name);
 */
+
+// ******** Destructuring of Array ********
+
+const course = {
+  courseName: "JavaScript",
+  price: "1000",
+  courseInstructor: "Hitesh - Chai aur Code",
+};
+
+// console.log(course.courseInstructor);
+
+const { courseInstructor } = course;
+console.log(courseInstructor);
+
+const { courseInstructor: cI } = course;
+console.log(cI);
+
+// This Destructuring concept is used in REACT
+
+// Array can also be destructured
+
+// ******** JSON - JavaScript Object Notation  ********
+
+// It is giving errors coz object has name but it doesn't have name
+// it is treated as json (Ignore errors for now, it's correct syntax)
+
+// {
+//     "name": "Saqib",
+//     "courseName": "JavaScript",
+//     "price": "free"
+// }
+
+// From API, we get this type of data
+// We can get API in form of array
+
+// Array of Objects
+// [{}, {}, {}];
+
+// Below example taken from: https://randomuser.me/
+
+// https://randomuser.me/api/
+
+// Copy this data and format it using https://jsonformatter.org/ to make it understandable
+
+// Now we can understand this DataTransfer, we will learn about this later that how we can handle this data
