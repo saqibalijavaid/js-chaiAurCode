@@ -1,5 +1,4 @@
 // ********* Truth values and False values *********
-
 /*
 
 ********* Falsy Values *********
