@@ -78,7 +78,115 @@ let result2 = addNum(7, 3);
 // ************ CALL STACK ************
 
 // Function memory me kis tarha jain ge, kis tarha bahir aaye ge
+// Follow LIFO order (Stack)
 
-// Follow LIFO order
+// Try "Call Stack" in browser.
 
-// Try "Call Stack" in the Sources tab of Developer mode of Browser
+/*
+***************** Procedure in Firefox Developer Tools *****************
+Open Developer Tools:
+Right-click on a webpage (new tab) and choose Inspect.
+
+Write a JavaScript Code Snippet:
+
+In the Console tab, you can write the following sample JavaScript code to test the call stack:
+
+// function firstFunction() {
+//     secondFunction();
+// }
+
+// function secondFunction() {
+//     thirdFunction();
+// }
+
+// function thirdFunction() {
+//     console.log("Call stack demo");
+//     debugger; // Pauses execution here to inspect the call stack
+// }
+
+// firstFunction();
+
+Run the Code:
+After writing the code in the Console, press Enter to execute it.
+The debugger statement will pause execution, and Firefox will automatically switch to the Debugger tab.
+
+Inspect the Call Stack:
+In the Debugger tab, look at the Call Stack section on the right.
+You will see the list of functions called up to the point where the execution was paused (e.g., thirdFunction, secondFunction, firstFunction).
+
+Step Through the Code:
+Use the following buttons to explore the flow of execution:
+Step Over (F10): Executes the next line in the current function.
+Step Into (F11): Jumps into the function being called.
+Step Out (Shift + F11): Jumps back to the caller function.
+As you step through, observe how the Call Stack changes, adding and removing function calls.
+
+
+
+***************** Procedure in Microsoft Edge Developer Tools *****************
+
+Open Developer Tools:
+
+Press F12 or Ctrl + Shift + I (Windows/Linux) to open Developer Tools, or right-click on a webpage and choose Inspect.
+Navigate to the Sources Tab:
+
+In the Developer Tools panel, click on the Sources tab at the top.
+This is where you'll be able to create and manage JavaScript code snippets.
+Create a New Snippet:
+
+In the Sources tab, on the left-hand side, you will see a file tree structure. Look for the Snippets section. If you don't see it:
+Click on the double arrow (»), then choose Snippets from the dropdown.
+Right-click on the Snippets folder and choose New to create a new snippet.
+Name your snippet (for example, callStackTest).
+Write JavaScript Code in the Snippet:
+
+In the newly created snippet, write the following JavaScript code to demonstrate how the Call Stack works:
+
+javascript
+Copy code
+function firstFunction() {
+    secondFunction();
+}
+
+function secondFunction() {
+    thirdFunction();
+}
+
+function thirdFunction() {
+    console.log("Call stack demo");
+    debugger; // Pauses execution to inspect the call stack
+}
+
+firstFunction();
+Run the Snippet:
+
+Right-click the snippet name (in the left-hand pane) and select Run.
+Alternatively, press the Play button (▶) at the bottom of the snippet editor to execute the code.
+Check the Call Stack:
+
+Once the debugger; statement is hit, execution will pause automatically.
+The Debugger panel will now show the Call Stack on the right-hand side.
+In the Call Stack section, you will see the list of functions leading up to the pause point, like:
+thirdFunction
+secondFunction
+firstFunction
+Step Through the Code:
+
+While paused at the debugger; statement, you can now use the step controls to navigate through the code:
+Step Over (F10): Move to the next line in the current function.
+Step Into (F11): Enter the called function.
+Step Out (Shift + F11): Return to the calling function.
+As you step through, you’ll see the Call Stack updating to reflect the current state of function calls.
+Observe the Call Stack Behavior:
+
+Each time you step into or out of a function, the call stack grows or shrinks accordingly, showing how function calls are managed.
+
+
+***************** Additional Tips for Both Browsers *****************
+
+Breakpoints: You can add breakpoints in your code by clicking on the line numbers in the Sources/Debugger tab. The code will pause execution at the breakpoint, allowing you to inspect the call stack at any point.
+Call Stack Depth: As you call more nested functions, the Call Stack grows. Once a function returns, it is popped off the stack.
+
+This approach should give you a thorough understanding of how the Call Stack works in both browsers.
+
+*/
